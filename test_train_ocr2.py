@@ -19,35 +19,43 @@ os.makedirs("predicted", exist_ok=True)
 
 # วนลูปทำนาย
 for path in image_paths:
-    print(f"Predicting: {path}")
+    print(f"🔍 Predicting: {path}")
     results = model(path)
 
     # โหลดภาพต้นฉบับ
     img = cv2.imread(path)
 
     # วนลูปผลการตรวจจับทั้งหมด
-    for box in results[0].boxes:
+    for i, box in enumerate(results[0].boxes):
         x1, y1, x2, y2 = map(int, box.xyxy[0])  # พิกัด bbox
-        cropped = img[y1:y2, x1:x2]  # ตัดส่วนของ bib ออกมา
+        cropped = img[y1:y2, x1:x2]  # ตัด bib ออกมา
 
         # OCR
         ocr_result = reader.readtext(cropped)
+        bib_number = None
+
         for detection in ocr_result:
             text = detection[1].replace(" ", "")  # ลบช่องว่าง
             conf = detection[2]
 
-            # กรองให้เหลือเฉพาะที่เป็นตัวเลขล้วน (ไม่มีตัวอักษรเลย)
+            # กรองเฉพาะตัวเลขล้วน
             if re.fullmatch(r'\d+', text):
-                print(f"✅ Detected BIB Number: {text} (Confidence: {conf:.2f})")
-                cv2.putText(img, text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-                break  # ถ้าเจอเลขแล้วไม่ต้องดู OCR ช่องอื่น
+                bib_number = text
+                print(f"✅ BIB Detected: {text} (Confidence: {conf:.2f})")
+
+                # ใส่ข้อความบนภาพ
+                cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.putText(img, text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX,
+                            1.2, (0, 255, 0), 3, cv2.LINE_AA)
+                break
             else:
                 print(f"❌ Skipped non-numeric text: {text}")
 
-        # วาดกรอบ
-        cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
+        # ถ้ายังไม่มีเลข ก็วาดกรอบเปล่า
+        if not bib_number:
+            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
-    # บันทึกภาพ
+    # บันทึกภาพที่มีกรอบและเลข
     out_path = f"predicted/{os.path.basename(path)}"
     cv2.imwrite(out_path, img)
-    print(f"Saved: {out_path}")
+    print(f"💾 Saved: {out_path}\n")

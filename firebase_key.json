@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "detech-bib-running",
+  "private_key_id": "36c73cb9ee7fb0acf4f9391ee0cd890aa0855c8c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNeLg3lfdllyY8\n4+Q1gi9Dgoct0Xz90zuUJ4QhOsrAORW78Q5ROFIJMbPiTJWfGszpv4A1+FygvGha\nxR9W7cNNbTGIet9o6vpjV5XGGZFKl52E0MT1ndssHuGaMS2IzdAIg77gwLvI4YKg\nxdHOYWLY52iNbLTLc3kbnarL3fE0Jahc9+heq1dSrWR0UGDzY+bVZ5bYhXI4EkKZ\nAJzAv/IQiGpgQnLPPSAgKxIzo1PqS9e14a1G6jmLGGuLG66HK+BXJer3nXrfIbof\nWU8FpgLk+C0sU2GsbR+B2TmtQm6Mf/FyUjuRRt4JKNUyVYd/6UmNp47QAHXHna2I\n6qcAUgEDAgMBAAECggEAIdUcBtxqK++rS6u9+B4+DbswlVehDE3GSdBck3jR9BHS\nOtaSjsbGd0jC/7ha4KOx6avvKV6CU13X6a5QnpMwLTpqxWLEu6AJZ5HUkcBu/zMf\ngZmQp4gnvnLn9JLewQpxPp2sMJImZDQsZVr9VM1jUHzWEdy8Q6MkEMCG5De2JOmM\nlLqP+gYcoOniYEjFj6YEUxfJ0eT2JC4/lXV8SexAS9SNjFz1QM/pvEVZbRZj6HgC\ntyDZ2W65/i1t+fG2mSSagWLRk4s2t/KoBKiU78ewvnoCqVuidcLvxajbKl/vrIyY\nw/6zVAEQMy384ZvaVay69JopuUz9Uo8AjNUqXx2DmQKBgQD85lawxAjzlll2Ab0O\n2IIB7n8INHBQ5zP2Pmwp3vvPAIczh6m3illHIJ6DWSbvQMABFJ3YgCNFVYSdqbrM\n8WrNLzupw0EyXzjioXIuBwyVrS8VvAbxlBsxXQ6cWaT9uXcqTGBrgWiYFz9liDQK\neC4d4F3DO0X1Oe3bKsTM5ICwmwKBgQDP/YonSdTSQMseC0IBaq1bI6kepdHLksEF\niRJSVwVHhOBSMmV1jGM1Pb26NoAWEivIetHx6N2PVDzDssELtnSmucro0srVpfbg\n9TArie0S4FkUYq2u5oMKTP7BEmXUIjIhtoSYg3AdNOXC+VAgGyuxslisexg3pbLh\nI6pQIeKzuQKBgQDDafhyfgessPBPjuhXIFTUyUS/QkXHPd+Y1oMdl39bZD0URC+P\n8wcpPrs9IxZCqPWz4ApX0Ctw17OxYAVHdwPfqC+h7Y3jLlD2TWm8xxWiUj+fu7ph\n0N9yNUWk6l/i7fx2Yq3eZBA99Ti3a5dKv7Jiw4uv340e/7QbNeD7sVT/IQKBgFpd\ns/qh719yW02wYnsvGCay9bWlIeOq3UZEabtwp5CNQNE1qDNMTYZCTv5q03fDaVZv\nVmweWrT9SnFUZt9p5IDT1D8X5pywwPS4Urd385Lx+oIK5Z9J88Ez9rN4BNoICXPw\nUufYo4ttAi6WF6P7ah6IeFJoIPt8eJ2s20B5mH+xAoGBAOwyNSWv5LkC83W4xrNH\nl0de81wq770sotcyxTANsClQZXD3Qjvuf/NSpGIQbH8XiNFZCHiWhOreRel1sfwp\n4PyZghmIfG0VA2tXsXpqm54BtyehbySD0RiOnB1QncXAdORWQi759HvLgFUXdAEP\n6K6AszzHI7Q8t+cSsTaSkXKd\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@detech-bib-running.iam.gserviceaccount.com",
+  "client_id": "101805022388582554895",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40detech-bib-running.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
